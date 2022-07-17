@@ -22,12 +22,3 @@ export const CryptoContext = ({ children }: any) => {
     </Crypto.Provider>
   );
 };
-
-// export const CryptoState = ():(CryptoContext|null) => {
-//   const ExportedContext = useContext(Crypto)
-//   return {
-//     symbol: ExportedContext?.symbol,
-//     currency: ExportedContext?.currency,
-//     setCurrency: ExportedContext?.setCurrency
-//   };
-// };

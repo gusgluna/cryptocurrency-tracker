@@ -3,7 +3,6 @@ import { styled } from '@mui/system';
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Crypto } from "../CryptoContext";
-// import { CryptoState } from "../CryptoContext";
 
 const TitleStyles = styled('div')({
   flex: 1,
