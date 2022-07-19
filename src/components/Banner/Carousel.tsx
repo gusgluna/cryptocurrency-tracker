@@ -7,7 +7,6 @@ import { Crypto } from "../../CryptoContext";
 import AliceCarousel from "react-alice-carousel";
 import { numberWithCommas } from "../../config/config";
 
-
 const CarouselStyled = styled('div')({
   height: "50%",
   display: "flex",
@@ -38,16 +37,11 @@ export const Carousel = () => {
 
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(CryptoContext?.currency.toLowerCase()));
-    // console.log(data);
     setTrendingData(data);
   };
 
-  console.log(trendingData);
-
-
   useEffect(() => {
     fetchTrendingCoins();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [CryptoContext?.currency]);
 
 

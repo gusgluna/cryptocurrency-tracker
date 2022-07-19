@@ -23,8 +23,6 @@ const DarkTheme = createTheme({
 
 export const Header = () => {
   const CryptoContext = useContext(Crypto);
-  console.log(CryptoContext?.currency, CryptoContext?.symbol);
-
   const navigate: any = useNavigate();
 
   return (
