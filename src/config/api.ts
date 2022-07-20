@@ -1,7 +1,7 @@
 const CoinList = (currency: string = "usd"): string =>
   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
 
-const SingleCoin = (id: string): string =>
+const SingleCoin = (id: string = "bitcoin"): string =>
   `https://api.coingecko.com/api/v3/coins/${id}`;
 
 const HistoricalChart = (id: string, days = 365, currency: string): string =>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Home } from './components/Home';
-import { CoinPage } from './components/CoinPage';
+import { Home } from './pages/Home';
+import { CoinPage } from './pages/CoinPage';
 import { styled } from '@mui/system';
 import './App.css';
 
