@@ -7,8 +7,7 @@ import axios from 'axios';
 import CoinInfo from "../components/CoinInfo";
 import parse from 'html-react-parser';
 import { numberWithCommas } from '../config/config';
-import { AppBar, Container, createTheme, MenuItem, Select, Toolbar, Typography, ThemeProvider, LinearProgress } from "@mui/material";
-
+import { Typography, LinearProgress } from "@mui/material";
 
 interface CoinTypes {
   name: string,
@@ -24,7 +23,6 @@ interface CoinTypes {
     market_cap: any;
   };
 }
-
 
 const ContainerStyled = styled('div')(
   ({ theme }) => ({
@@ -91,7 +89,6 @@ export const CoinPage = () => {
   const [coin, setCoin] = useState<CoinTypes>();
   const CryptoContext = useContext(Crypto);
 
-
   const fetchCoin = async () => {
     const { data } = await axios.get(SingleCoin(id));
     setCoin(data);
@@ -100,8 +97,6 @@ export const CoinPage = () => {
   useEffect(() => {
     fetchCoin();
   }, []);
-
-  console.log(coin);
 
   if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
 
@@ -169,8 +164,7 @@ export const CoinPage = () => {
           </span>
         </MarketData>
       </SideBar>
-
-      <CoinInfo />
+      <CoinInfo coin={coin} />
     </ContainerStyled>
   );
 };;

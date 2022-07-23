@@ -31,8 +31,8 @@ export const Header = () => {
         <Container>
           <Toolbar>
             <TitleStyles>
-              <Typography fontWeight='bolder' variant="h6" onClick={() => navigate('/')} >
-                Crypto Hunter
+              <Typography fontWeight='900' variant="h6" onClick={() => navigate('/')} >
+                Crypto Tracker
               </Typography>
             </TitleStyles>
             <Select

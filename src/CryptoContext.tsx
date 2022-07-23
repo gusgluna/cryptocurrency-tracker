@@ -5,6 +5,7 @@ interface CryptoContext {
   currency: string,
   setCurrency: Function;
 }
+
 export const Crypto = createContext<CryptoContext | null>(null);
 
 export const CryptoContext = ({ children }: any) => {
